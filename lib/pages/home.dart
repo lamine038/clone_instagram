@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:instagram/components/appbar.dart';
+import 'package:instagram/components/post.dart';
 import 'package:instagram/components/story.dart';
 
 
@@ -11,13 +12,14 @@ class Home extends StatelessWidget{
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppbarComponent(),
-        body: Container(
+        body: SingleChildScrollView(
           child: Container(
             child: Column(
               children: [
                 Story(),
                 divider,
-                Posts,
+                SizedBox(height: 10),
+                Post(),
               ],
             ),
           ),
@@ -30,22 +32,12 @@ class Home extends StatelessWidget{
 Widget Stories = Container(
   child: Row(
     mainAxisAlignment: MainAxisAlignment.start,
-    children: 
-      // Container(
-      //   height: 80,
-      //   color: Colors.red,
-      //   width: 80,
-      // ),
-    
+    children:    
   [],)
 );
 
 Widget divider = Divider(
-  color: Colors.grey,
-  height: 1,
+  color: const Color.fromARGB(223, 154, 123, 123),
+  height: 2,
   thickness: 1,
-);
-
-Widget Posts = Container(
-
 );

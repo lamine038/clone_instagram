@@ -6,9 +6,15 @@ class AppbarComponent extends StatelessWidget implements PreferredSizeWidget{
   @override
   Widget build(BuildContext context) {
     return AppBar(
-          toolbarHeight: 100,
-          title: Image.asset('assets/profile/logos_instagram.png', width: 100),
+          toolbarHeight: 200,
+          title: Image.asset('assets/profile/logos_instagram.png', width: 140),
           actions: [
+            IconButton(
+              icon: Icon(Icons.add),
+              onPressed: () {
+                // Action pour le bouton de messagerie
+              },
+            ),
             IconButton(
               icon: Icon(Icons.favorite_border),
               onPressed: () {
